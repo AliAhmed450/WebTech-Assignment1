@@ -4,15 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundamentals of Internet & Web </title>
+    <title>Fundamentals of Internet & Web | Faizan Mukhtar</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
         * {
-            padding: 0;
             margin: 0;
+            padding: 0;
             box-sizing: border-box;
-            font-family: "Montserrat", sans-serif;
+            font-family: Arial, sans-serif;
         }
 
         html {
@@ -20,282 +18,296 @@
         }
 
         body {
-            background-color: #181818;
-            color: #fdf8f0;
+            background: #f5f5f5;
+            color: #222;
         }
 
-        .main-heading {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 24px 40px;
-            background-color: #202020;
-            border-bottom: 1px solid #3b3b3b;
+        .title-area {
+            text-align: center;
+            background: white;
+            padding: 42px 20px 30px;
+            border-bottom: 3px solid #2f6f7e;
         }
 
-        .main-heading span {
-            font-size: 1.6rem;
+        .title-area h1 {
+            font-size: 34px;
+            color: #1f4f59;
+            margin-bottom: 8px;
+        }
+
+        .title-area p {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .title-area h5 {
+            font-size: 14px;
             font-weight: 600;
-
-            letter-spacing: 0.5px;
+            color: #333;
         }
 
         .table-of-content {
-            width: 100%;
-            max-width: 1300px;
-            margin: 20px auto;
+            width: 92%;
+            max-width: 1100px;
+            margin: 35px auto;
         }
 
         h3 {
-            text-align: center;
-            margin-bottom: 25px;
-            font-size: 26px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            color: #fdf8f0;
+            font-size: 22px;
+            color: #1f4f59;
+            margin-bottom: 18px;
+            text-align: left;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            background-color: #1f1f1f;
-            border: 1px solid #444;
-            border-radius: 8px;
-            overflow: hidden;
+            background: white;
+        }
+
+        th, td {
+            padding: 12px 14px;
+            border: 1px solid #cfcfcf;
+            text-align: left;
+            font-size: 14px;
         }
 
         th {
-            padding: 16px 20px;
-            text-align: left;
-            background-color: #2a2a2a;
-            color: #ffffff;
-            font-size: 14px;
-            letter-spacing: 1px;
-            border-bottom: 1px solid #444;
-        }
-
-        td {
-            padding: 15px 20px;
-            color: #e8e8e8;
-            border-bottom: 1px solid #333;
-            font-size: 14px;
-        }
-
-        tr:hover td {
-            background-color: #252525;
-        }
-
-        a {
-            color: #8fd3ff;
-            text-decoration: none;
-            font-weight: 500;
-            cursor: pointer;
-        }
-
-        a:hover {
+            background: #2f6f7e;
             color: white;
         }
 
-        .box-container{
-            text-align: left;
-            padding-left: 20px;
-            padding-top: 16px;
+        tr:nth-child(even) {
+            background: #f1f7f8;
         }
 
-        .box-container h3{
-            text-align: left;
-            padding-left: 20px;
-            padding-top: 16px;
-        }
-
-        .box-container p, ul, li{
-            padding: 3px;
-            text-align: left;
-            padding-left: 20px;
-        }
-
-        .context{
-            padding-left: 20px;
-            padding-bottom: 40px;
-            padding-top: 40px;
-        }
-        hr{
-            max-width: 1250px;
-        }
-
-        .button{
-            padding: 12px 16px;
-            margin-left: 87%;
-            cursor: pointer;
-            border-radius: 4px;
-            background-color: #181818;
-            color: #8fd3ff;
+        a {
+            color: #2f6f7e;
             text-decoration: none;
-            border: 2px solid #1f1f1f;
-            /* transition: 0.4s ease; */
+            font-weight: 600;
         }
 
-        /* .button:hover, a:hover{
-            background-color: #8fd3ff;
-            color: #181818;
-        } */
+        a:hover {
+            text-decoration: underline;
+        }
 
-        i{
-            color: #8fd3ff;
+        .context {
+            width: 92%;
+            max-width: 1100px;
+            margin: auto;
+            padding-bottom: 35px;
+        }
+
+        .box-container {
+            background: white;
+            border: 1px solid #d7d7d7;
+            padding: 22px;
+            margin-bottom: 18px;
+        }
+
+        .box-container h3 {
+            font-size: 20px;
+            color: #1f4f59;
+            margin-bottom: 14px;
+            border-bottom: 1px solid #d7d7d7;
+            padding-bottom: 8px;
+        }
+
+        .box-container p, ul, li {
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .box-container ul {
+            margin-left: 22px;
+        }
+
+        hr {
+            display: none;
+        }
+
+        .button {
+            margin-top: 14px;
+            padding: 8px 12px;
+            background: #2f6f7e;
+            border: none;
             cursor: pointer;
         }
 
-        pre{
-            padding: 10px 10px;
-            border: 1px solid#e8e8e8;
-            background-color: #8fd3ff;
-            color: #181818;
-            max-width: 750px;
-            border-radius: 8px;
+        .button a,
+        #btn {
+            color: white;
         }
 
-        h4{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 13px;
-            font-weight: 400;
+        i {
+            color: #2f6f7e;
+        }
+
+        pre {
+            background: #f0f0f0;
+            border: 1px solid #cccccc;
+            padding: 12px;
+            max-width: 760px;
+            overflow-x: auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 18px;
+            display: none;
+            border: 1px solid #cccccc;
+        }
+
+        footer {
+            background: #1f4f59;
+            color: white;
+        }
+
+        h4 {
             text-align: center;
-            padding: 20px 20px;
+            padding: 18px;
+            font-size: 12px;
+            font-weight: 400;
         }
     </style>
 </head>
 
 <body>
-    <div class="main-heading" id="main-heading">
-        <span>Fundamentals of <span style="color: rgb(255, 152, 32);">Internet</span> & Web</span>
-    </div>
-    <div class="table-of-content">
-        <h3>TABLE OF CONTENT</h3>
+    <header class="title-area" id="main-heading">
+        <h1>Internet & Web Fundamentals</h1>
+        <p>Assignment 01</p>
+        <h5>Prepared by Ali</h5>
+    </header>
+    <div class="table-of-content" id="contents">
+        <h3>TOPIC INDEX</h3>
 
         <table>
             <tr>
-                <th>NO.</th>
-                <th>TOPICS</th>
-                <th>READ MORE</th>
+                <th>#</th>
+                <th>TOPIC NAME</th>
+                <th>OPEN</th>
             </tr>
             <tr>
                 <td>01</td>
                 <td>The Internet</td>
-                <td><a href="#internet">CLICK HERE</a></td>
+                <td><a href="#internet">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>02</td>
                 <td>The World Wide Web (Web)</td>
-                <td><a href="#web">CLICK HERE</a></td>
+                <td><a href="#web">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>03</td>
                 <td>W3C World Wide Web Consortium</td>
-                <td><a href="#w3c">CLICK HERE</a></td>
+                <td><a href="#w3c">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>04</td>
                 <td>Web Page</td>
-                <td><a href="#webpage">CLICK HERE</a></td>
+                <td><a href="#webpage">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>05</td>
                 <td>Website</td>
-                <td><a href="#website">CLICK HERE</a></td>
+                <td><a href="#website">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>06</td>
                 <td>Home Page</td>
-                <td><a href="#homepage">CLICK HERE</a></td>
+                <td><a href="#homepage">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>07</td>
                 <td>Index Page</td>
-                <td><a href="#indexpage">CLICK HERE</a></td>
+                <td><a href="#indexpage">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>08</td>
                 <td>Landing Page</td>
-                <td><a href="#landingpage">CLICK HERE</a></td>
+                <td><a href="#landingpage">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>09</td>
                 <td>Web Browser</td>
-                <td><a href="#browser">CLICK HERE</a></td>
+                <td><a href="#browser">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>10</td>
                 <td>Web Server</td>
-                <td><a href="#server">CLICK HERE</a></td>
+                <td><a href="#server">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>11</td>
                 <td>Web Domain</td>
-                <td><a href="#domain">CLICK HERE</a></td>
+                <td><a href="#domain">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>12</td>
                 <td>URL - Uniform Resource Locator</td>
-                <td><a href="#url">CLICK HERE</a></td>
+                <td><a href="#url">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>13</td>
                 <td>URI - Uniform Resource Identifier</td>
-                <td><a href="#uri">CLICK HERE</a></td>
+                <td><a href="#uri">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>14</td>
                 <td>HTTP - HyperText Transfer Protocol</td>
-                <td><a href="#http">CLICK HERE</a></td>
+                <td><a href="#http">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>15</td>
                 <td>HTTPS - HyperText Transfer Protocol Secure</td>
-                <td><a href="#https">CLICK HERE</a></td>
+                <td><a href="#https">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>16</td>
                 <td>SSL - Secure Sockets Layer</td>
-                <td><a href="#ssl">CLICK HERE</a></td>
+                <td><a href="#ssl">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>17</td>
                 <td>TLS - Transport Layer Security</td>
-                <td><a href="#tls">CLICK HERE</a></td>
+                <td><a href="#tls">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>18</td>
                 <td>HTML - HyperText Markup Language</td>
-                <td><a href="#html">CLICK HERE</a></td>
+                <td><a href="#html">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>19</td>
                 <td>IP Address</td>
-                <td><a href="#ip">CLICK HERE</a></td>
+                <td><a href="#ip">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>20</td>
                 <td>DNS - Domain Name System</td>
-                <td><a href="#dns">CLICK HERE</a></td>
+                <td><a href="#dns">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>21</td>
                 <td>NSlookup / nslookup</td>
-                <td><a href="#nslookup">CLICK HERE</a></td>
+                <td><a href="#nslookup">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>22</td>
                 <td>Search Engines</td>
-                <td><a href="#searchengines">CLICK HERE</a></td>
+                <td><a href="#searchengines">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>23</td>
                 <td>ChatGPT</td>
-                <td><a href="#chatgpt">CLICK HERE</a></td>
+                <td><a href="#chatgpt">VIEW TOPIC</a></td>
             </tr>
             <tr>
                 <td>24</td>
                 <td>Hyperlinks / Links</td>
-                <td><a href="#hyperlinks">CLICK HERE</a></td>
+                <td><a href="#hyperlinks">VIEW TOPIC</a></td>
             </tr>
         </table>
     </div>
@@ -310,7 +322,7 @@
                 <ul><li><strong>ARPANET (1969):</strong> One of the earliest operational packet-switching networks and an important predecessor of today's Internet.<br></li></ul>
                 <ul><li>The Internet connects computers, servers, smartphones, networks, and other devices worldwide.</li></ul>
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 2 -->
         <div class="box-container">
@@ -320,7 +332,7 @@
                 <ul><li>Invented by Tim Berners-Lee in 1989.<br></li></ul>
                 <ul><li>The Web uses technologies such as HTML, HTTP, URLs, and web browsers.</li></ul>
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 3 -->
         <div class="box-container">
@@ -332,7 +344,7 @@
                 <ul><li>Web accessibility</li></ul>
                 <ul><li>Web architecture</li></ul>
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 4 -->
         <div class="box-container">
@@ -341,7 +353,7 @@
             <p>A web page is a single document available on the Web, usually created using HTML. <br><br> <strong>Example: <br> </strong><br>
                 <i>https://example.com/about.html <br> </i> The About page is one web page.
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 5 -->
         <div class="box-container">
@@ -354,7 +366,7 @@
                 <ul><li>Services page</li></ul>
                 <ul><li>Blog pages</li></ul>
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 6 -->
         <div class="box-container">
@@ -363,7 +375,7 @@
             <p>The home page is generally the main or introductory page of a website. <br><br><strong>Example: </strong><br><br><i>https://www.example.com/</i><br>
                 It normally provides navigation to other important sections.
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 7 -->
         <div class="box-container">
@@ -375,7 +387,7 @@
                 <ul><li>index.py</li></ul><br><br> <strong>For Example: </strong> <br><br> <i>https://example.com/</i><br><br>
                 <strong><i>Important: </i></strong> A home page and an index page are related concepts but are not necessarily identical.
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 8 -->
         <div class="box-container">
@@ -387,7 +399,7 @@
                 <ul><li>Download an application</li></ul>
                 <ul><li>Submit a form</li></ul>
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 9 -->
         <div class="box-container">
@@ -400,7 +412,7 @@
                 <ul><li>Safari</li></ul><br><br>
                 A browser sends requests to web servers and renders the returned content.
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 10 -->
         <div class="box-container">
@@ -415,7 +427,7 @@
                 <i>Web Browser  ---(HTTP/HTTPS Request)--->  Web Server</i><br>
                 <i>Web Browser  <--(HTTP/HTTPS Response)---  Web Server</i>
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 11 -->
         <div class="box-container">
@@ -424,7 +436,7 @@
             <p>A domain name is a human-readable name used to identify a website or Internet service.<br><br> <strong>Example: </strong><br><br> <i>www.example.com</i><br>
                 Instead of remembering an IP address such as <i>93.184.216.34</i>, users can use the domain name.
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 12 -->
         <div class="box-container">
@@ -434,7 +446,7 @@
                 <i>https://www.example.com/2024/samples/first.html <br>
                    |_____|   |_________________|  |_____________________| <br>
                   Protocol     Host/Domain                 Directory & File</i>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 13 -->
         <div class="box-container">
@@ -442,7 +454,7 @@
             <h3 id="uri">13. URI - Uniform Resource Identifier</h3>
             <p>A URI is a broader concept used to identify a resource. A URL is a type of URI. <br><br> <strong><i>Simple distinction: </i></strong> URI identifies a resource; URL identifies a resource and provides its location/access method.
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 14 -->
         <div class="box-container">
@@ -451,7 +463,7 @@
             <p>HTTP is the protocol used for communication between web clients and servers. <br><br><i>Browser → HTTP Request → Server <br>
                 Browser ← HTTP Response ← Server</i> <br><br> HTTP commonly uses <strong><i>port 80</i></strong>.
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 15 -->
         <div class="box-container">
@@ -464,7 +476,7 @@
 
                 HTTPS commonly uses <strong><i>port 443</i></strong>.
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 16 -->
         <div class="box-container">
@@ -472,7 +484,7 @@
             <h3 id="ssl">16. SSL - Secure Sockets Layer</h3>
             <p>SSL was an earlier security protocol designed to secure network communication. <br><br> <strong><i>Important: </i></strong> SSL has been deprecated and replaced by TLS. Modern HTTPS uses TLS, not SSL.
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 17 -->
         <div class="box-container">
@@ -480,7 +492,7 @@
             <h3 id="tls">17. TLS - Transport Layer Security</h3>
             <p>TLS is the modern cryptographic protocol used to secure communications such as HTTPS.
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 17 -->
         <div class="box-container">
@@ -502,7 +514,7 @@
                     &lt;/html&gt;</pre>
                 </span>
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 19 -->
         <div class="box-container">
@@ -513,7 +525,7 @@
                 <ul><li><strong><i>Example IPv6: </i></strong>2001:db8::1</li></ul><br><br>
                 A domain name is translated into an IP address so that network communication can take place.
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 20 -->
         <div class="box-container">
@@ -523,7 +535,7 @@
                 <i>www.example.com → <strong><i>DNS</i></strong> → 93.184.216.34</i>
 
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 21 -->
         <div class="box-container">
@@ -535,7 +547,7 @@
                 <ul><li>DNS server information</li></ul>
                 <ul><li>DNS records</li></ul>
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 22 -->
         <div class="box-container">
@@ -545,7 +557,8 @@
                 <strong>Basic process: </strong><br>
                 User enters query <i>→</i> Search Engine Search Index <i>→</i> Relevant Results <i>→</i> User selects a result
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 23 -->
         <div class="box-container">
@@ -553,7 +566,7 @@
             <h3 id="chatgpt">23. ChatGPT</h3>
             <p>ChatGPT is an AI-based conversational system developed by OpenAI. It can understand natural-language prompts and generate responses, explanations, summaries, code, and other content. <br><br> <strong><i>Important distinction: </i></strong> A search engine primarily helps users find existing information, while ChatGPT primarily generates responses based on its model and available information/tools.
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
         <!-- Box - 24 -->
         <div class="box-container">
@@ -561,12 +574,12 @@
             <h3 id="hyperlinks">24. Hyperlinks / Links</h3>
             <p>A hyperlink is a clickable reference that connects one resource to another. <br><br> <strong><i>HTML example: </i></strong> <code>&lt;  a href="https://example.com"&gt;Visit Example&lt;/a&gt;</code>
             </p>
-            <button class="button"><a href="#main-heading">GO ON TOP</a></button>
+            <button class="button"><a href="#contents">BACK TO CONTENTS</a></button>
         </div>
 
     </div>
     <footer>
-        <h4>MADE BY Ali Ahmed Khan</h4>
+        <h4>MADE WITH BY ALI</h4>
     </footer>
 </body>
 
